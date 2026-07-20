@@ -1,0 +1,366 @@
+/* ==========================
+   Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+
+    background:#0f172a;
+    color:white;
+    overflow:hidden;
+
+}
+
+/* ==========================
+   Main Layout
+========================== */
+
+.container{
+
+    display:flex;
+    height:100vh;
+
+}
+
+/* ==========================
+   Left Side
+========================== */
+
+.left{
+
+    width:55%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+
+    padding:60px;
+
+}
+
+.left h1{
+
+    font-size:72px;
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.left p{
+
+    font-size:24px;
+    text-align:center;
+
+    max-width:550px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   Right Side
+========================== */
+
+.right{
+
+    width:45%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#0f172a;
+
+}
+
+/* Blue Glow */
+
+.right::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    filter:blur(180px);
+
+    opacity:.22;
+
+    top:-120px;
+    right:-120px;
+
+}
+
+/* ==========================
+   Glass Card
+========================== */
+
+.card{
+
+    width:430px;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+            0 8px 32px rgba(0,0,0,.35);
+
+    position:relative;
+
+    z-index:5;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+            0 15px 40px rgba(37,99,235,.28);
+
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.card h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:35px;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   Form
+========================== */
+
+form{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    margin-bottom:20px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+input::placeholder{
+
+    color:rgba(255,255,255,.60);
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#38bdf8;
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:
+            0 0 18px rgba(56,189,248,.35);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+            0 10px 25px rgba(37,99,235,.45);
+
+}
+
+button:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}
+
+/* ==========================
+   Links
+========================== */
+
+.card p{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#d1d5db;
+
+}
+
+.card a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.card a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+   Message
+========================== */
+
+#message{
+
+    text-align:center;
+
+    margin-top:18px;
+
+    font-weight:500;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+    .container{
+
+        flex-direction:column;
+
+    }
+
+    .left{
+
+        width:100%;
+        height:35vh;
+
+    }
+
+    .left h1{
+
+        font-size:52px;
+
+    }
+
+    .left p{
+
+        font-size:18px;
+
+    }
+
+    .right{
+
+        width:100%;
+        height:65vh;
+
+    }
+
+    .card{
+
+        width:90%;
+
+    }
+
+}

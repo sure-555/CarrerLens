@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerLens Dashboard</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>CareerLens</h2>
+    </div>
+
+    <ul>
+
+        <li class="active" onclick="window.location='/dashboard'">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </li>
+
+        <li onclick="document.getElementById('resumeFile').click()">
+            <i class="fa-solid fa-file-arrow-up"></i>
+            <span>Upload Resume</span>
+        </li>
+
+        <li onclick="window.location='/analysis'">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>ATS Analysis</span>
+        </li>
+
+        <li onclick="showProjects()">
+            <i class="fa-solid fa-code"></i>
+            <span>Projects</span>
+        </li>
+
+        <li onclick="showCourses()">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Courses</span>
+        </li>
+
+        <li onclick="showProfile()">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </li>
+
+        <li id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <!-- ========================= -->
+    <!-- Navbar -->
+    <!-- ========================= -->
+
+    <nav>
+
+        <div>
+
+            <h1>Welcome Back 👋</h1>
+
+            <p>Ready to improve your resume today?</p>
+
+        </div>
+
+        <div class="profile">
+
+            <img
+                    src="https://ui-avatars.com/api/?name=User&background=2563eb&color=fff"
+                    alt="Profile">
+
+        </div>
+
+    </nav>
+
+    <!-- ========================= -->
+    <!-- Dashboard Cards -->
+    <!-- ========================= -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h2 id="resumeCount">0</h2>
+
+            <p>Uploaded Resumes</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h2 id="highestScore">0%</h2>
+
+            <p>Highest ATS Score</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+            <h2 id="targetRole">-</h2>
+
+            <p>Latest Job Role</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h2 id="analysisCount">0</h2>
+
+            <p>Total Analyses</p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Upload Resume -->
+    <!-- ========================= -->
+
+    <div class="content">
+
+        <div class="upload-card">
+
+            <h2>Upload Resume</h2>
+
+            <div class="drop-area" id="dropArea">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h3>Drag & Drop Resume</h3>
+
+                <p>or</p>
+
+                <input
+                        type="file"
+                        id="resumeFile"
+                        hidden
+                        accept=".pdf">
+
+                <button id="chooseBtn">
+
+                    Choose PDF
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Job Role -->
+        <!-- ========================= -->
+
+        <div class="role-card">
+
+            <h2>Choose Job Role</h2>
+
+            <select id="jobRole">
+
+                <option>Java Developer</option>
+
+                <option>Frontend Developer</option>
+
+                <option>Backend Developer</option>
+
+                <option>Full Stack Developer</option>
+
+                <option>Python Developer</option>
+
+                <option>Data Analyst</option>
+
+                <option>AI Engineer</option>
+
+                <option>Machine Learning Engineer</option>
+
+                <option>Cloud Engineer</option>
+
+            </select>
+
+            <button id="analyzeBtn">
+
+                Analyze Resume
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Previous Analyses -->
+    <!-- ========================= -->
+
+    <div
+            class="analysis-section"
+            id="analysisSection"
+            style="display:none;">
+
+        <h2>Previous Analyses</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Resume</th>
+
+                <th>Role</th>
+
+                <th>ATS Score</th>
+
+                <th>Date</th>
+
+                <th>Status</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+
+</body>
+</html>

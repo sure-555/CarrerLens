@@ -1,0 +1,193 @@
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 10%;
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    background:rgba(15,23,42,.9);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#38bdf8;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#38bdf8;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+}
+
+.hero p{
+
+    width:70%;
+
+    margin:30px auto;
+
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+
+    background:#111827;
+
+}
+
+.card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#1f2937;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(56,189,248,.3);
+
+}
+
+/* ================= HOW ================= */
+
+.steps{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.step{
+
+    flex:1;
+
+    min-width:220px;
+
+    text-align:center;
+
+    padding:25px;
+
+    background:#1f2937;
+
+    border-radius:15px;
+
+}
+
+.step h3{
+
+    width:60px;
+
+    height:60px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:25px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#020617;
+
+}
+
+footer h2{
+
+    margin-bottom:15px;
+
+}

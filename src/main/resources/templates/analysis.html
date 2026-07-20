@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerLens | Analysis</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/analysis.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h2>CareerLens</h2>
+
+        <ul>
+
+            <li onclick="window.location='/dashboard'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                Analysis
+            </li>
+
+            <li onclick="window.location='/login'">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Resume Analysis</h1>
+
+        <div class="top">
+
+            <div class="score-card">
+
+                <h2>ATS Score</h2>
+
+                <div class="circle">
+
+                    <span id="scoreValue">0%</span>
+
+                </div>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h2>Summary</h2>
+
+                <p id="summary">
+
+                    Excellent resume with strong technical skills.
+                    Add more measurable achievements and certifications
+                    to improve ATS compatibility.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="glass">
+
+                <h2>Skill Match</h2>
+
+                <div class="progress">
+                    <label>Java</label>
+                    <div class="bar"><span style="width:90%"></span></div>
+                </div>
+
+                <div class="progress">
+                    <label>Spring Boot</label>
+                    <div class="bar"><span style="width:85%"></span></div>
+                </div>
+
+                <div class="progress">
+                    <label>SQL</label>
+                    <div class="bar"><span style="width:80%"></span></div>
+                </div>
+
+            </div>
+
+            <div class="glass">
+
+                <h2>Missing Skills</h2>
+
+                <div class="tags">
+
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>Kafka</span>
+                    <span>Redis</span>
+
+                </div>
+
+            </div>
+
+            <div class="glass">
+
+                <h2>Resume Improvements</h2>
+
+                <ul>
+
+                    <li>Add measurable achievements.</li>
+
+                    <li>Improve project descriptions.</li>
+
+                    <li>Add LinkedIn profile.</li>
+
+                    <li>Add certifications.</li>
+
+                    <li>Reduce lengthy paragraphs.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="glass">
+
+                <h2>Recommended Courses</h2>
+
+                <ul>
+
+                    <li>Spring Boot Masterclass</li>
+
+                    <li>Docker Essentials</li>
+
+                    <li>AWS Cloud Practitioner</li>
+
+                    <li>REST API Best Practices</li>
+
+                </ul>
+
+            </div>
+
+            <div class="glass">
+
+                <h2>Recommended Projects</h2>
+
+                <ul>
+
+                    <li>E-Commerce Backend</li>
+
+                    <li>Hospital Management System</li>
+
+                    <li>AI Resume Analyzer</li>
+
+                    <li>Online Banking System</li>
+
+                </ul>
+
+            </div>
+
+            <div class="glass">
+
+                <h2>Next Step</h2>
+
+                <p>
+
+                    Complete the missing skills,
+                    improve your resume,
+                    then upload it again to increase
+                    your ATS score.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="reanalyze">
+
+                Analyze Again
+
+            </button>
+
+            <button id="download">
+
+                Download Report
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="/js/analysis.js"></script>
+
+</body>
+</html>
